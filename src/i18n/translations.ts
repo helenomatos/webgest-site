@@ -217,7 +217,7 @@ const pt = {
   "whatsapp.ariaLabel": "Abrir conversa no WhatsApp",
 } as const;
 
-const en: typeof pt = {
+const en: Record<keyof typeof pt, string> = {
   // Header
   "header.nav.home": "Home",
   "header.nav.about": "About",

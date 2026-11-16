@@ -95,7 +95,7 @@ function Portfolio() {
                 {CardInner}
               </a>
             ) : (
-              <div key={project.title} className="block h-full w-full">
+              <div key={project.titleKey} className="block h-full w-full">
                 {CardInner}
               </div>
             );

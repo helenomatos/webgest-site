@@ -1,26 +1,48 @@
-# WebGest - Frontend
+# Webgest Solutions — website
 
-Aplicacao frontend da WebGest desenvolvida com Vite, React, TypeScript, Tailwind CSS e shadcn/ui.
+Bilingual (PT/EN) website for Webgest Solutions, the digital studio I co-founded. It presents the studio's services, plans and past work, and turns visitors into leads through a contact form and WhatsApp.
 
-## Requisitos
+**Live:** https://webgest-site.vercel.app
 
-- Node.js 18+
-- npm
+![Webgest Solutions home page](public/og-image.jpg)
 
-## Como comecar
+## Features
 
-```sh
+- **Two languages:** Portuguese and English. Every string lives in `src/i18n/translations.ts`, and the English dictionary is type-checked against the Portuguese keys, so a missing translation is a type error.
+- **Sections:** hero, services, why choose us, plans, portfolio, about, call to action and contact.
+- **Lead capture:** the contact form posts each lead to the studio's API. A floating WhatsApp button stays on screen.
+- **Portfolio cards:** link to the live client sites the studio has built.
+
+## Tech stack
+
+React 18 · TypeScript · Vite · Tailwind CSS · shadcn/ui (Radix UI) · React Router · Vercel
+
+## Getting started
+
+Requires Node.js 18 or newer.
+
+```bash
 npm install
-npm run dev
+npm run dev       # http://localhost:8080
 ```
 
-## Scripts uteis
+| Script            | What it does                        |
+| ----------------- | ----------------------------------- |
+| `npm run dev`     | Dev server with hot reload          |
+| `npm run build`   | Production build into `dist/`       |
+| `npm run preview` | Serves the production build locally |
+| `npm run lint`    | Runs ESLint                         |
 
-- `npm run dev` inicia o servidor de desenvolvimento.
-- `npm run build` gera o bundle de producao.
-- `npm run preview` serve o build gerado em modo pre-visualizacao.
-- `npm run lint` executa a verificacao estatica do codigo.
+## Project structure
 
-## Deploy
+```
+src/
+├── components/   # one component per section (Hero, Services, Plans, Portfolio, Contact…) and ui/ primitives
+├── i18n/         # LanguageContext and the PT/EN translation dictionaries
+├── pages/        # Index and NotFound
+└── assets/       # images and logos
+```
 
-Execute `npm run build` e utilize o conteudo da pasta `dist` no provedor de hospedagem de sua preferencia.
+---
+
+Built by [Heleno Matos](https://portfolio.helenomatos.com) at [Webgest Solutions](https://webgestsolutions.com.br).

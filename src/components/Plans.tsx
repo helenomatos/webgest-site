@@ -93,7 +93,7 @@ export function Plans() {
             const Icon = plan.icon;
             return (
               <div
-                key={plan.name}
+                key={plan.titleKey}
                 className="bg-card rounded-2xl p-8 border border-border/50 hover:border-primary/30 transition-all duration-500 hover:-translate-y-2 hover:shadow-xl group flex flex-col h-full"
               >
                 <div className="inline-flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-to-r from-primary to-webgest-orange mb-6 group-hover:scale-110 transition-transform duration-300">
@@ -131,7 +131,7 @@ export function Plans() {
               const Icon = option.icon;
               return (
                 <div
-                  key={option.name}
+                  key={option.titleKey}
                   className="bg-card rounded-2xl p-8 border border-border/50 hover:border-primary/30 transition-all duration-500 hover:-translate-y-2 hover:shadow-xl group flex flex-col h-full"
                 >
                   <div className="inline-flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-to-r from-primary to-webgest-orange mb-6 group-hover:scale-110 transition-transform duration-300">
